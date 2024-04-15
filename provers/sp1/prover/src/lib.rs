@@ -40,7 +40,7 @@ impl Prover for Sp1Prover {
         let mut proof = client.prove(ELF, stdin).expect("Sp1: proving failed");
 
         // Read the output.
-        let output = proof.stdin.read::<GuestOutput>();
+        let output = proof.public_values.read::<GuestOutput>();
 
         // Verify proof.
         client
