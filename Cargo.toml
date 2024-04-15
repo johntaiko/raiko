@@ -38,14 +38,14 @@ revm = { git = "https://github.com/taikoxyz/revm.git", branch = "fix-ecrecover",
 ] }
 
 # risc zero
-risc0-zkvm = { version = "0.21.0", features = ["prove", "getrandom"]}
-bonsai-sdk = { version = "0.7.0", features = ["async"]}
+risc0-zkvm = { version = "0.21.0", features = ["prove", "getrandom"] }
+bonsai-sdk = { version = "0.7.0", features = ["async"] }
 risc0-build = { version = "0.21.0" }
 
 # SP1
-sp1-core = { git = "https://github.com/succinctlabs/sp1.git", rev = "cb43fd74b24fad8ed24a4885499159de3680c89f" }
-sp1-zkvm = { git = "https://github.com/succinctlabs/sp1.git", rev = "cb43fd74b24fad8ed24a4885499159de3680c89f" }
-sp1-helper = { git = "https://github.com/succinctlabs/sp1.git", rev = "cb43fd74b24fad8ed24a4885499159de3680c89f" }
+sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git", branch = "main" }
+sp1-zkvm = { git = "https://github.com/succinctlabs/sp1.git", branch = "main" }
+sp1-helper = { git = "https://github.com/succinctlabs/sp1.git", branch = "main" }
 
 # alloy
 alloy-rlp = { version = "0.3", default-features = false }
@@ -57,9 +57,15 @@ alloy-primitives = { version = "0.7.0", default-features = false }
 alloy-sol-types = { version = "0.7.0", default-features = false }
 alloy-rpc-types = { git = "https://github.com/brechtpd/alloy", branch = "175" }
 alloy-rpc-client = { git = "https://github.com/brechtpd/alloy", branch = "175" }
-alloy-consensus = { git = "https://github.com/brechtpd/alloy", branch = "175", features = ["serde"] }
-alloy-network = { git = "https://github.com/brechtpd/alloy", branch = "175", features = ["k256"] }
-alloy-eips = { git = "https://github.com/brechtpd/alloy", branch = "175", features = ["serde"]  }
+alloy-consensus = { git = "https://github.com/brechtpd/alloy", branch = "175", features = [
+    "serde",
+] }
+alloy-network = { git = "https://github.com/brechtpd/alloy", branch = "175", features = [
+    "k256",
+] }
+alloy-eips = { git = "https://github.com/brechtpd/alloy", branch = "175", features = [
+    "serde",
+] }
 alloy-provider = { git = "https://github.com/brechtpd/alloy", branch = "175" }
 alloy-transport-http = { git = "https://github.com/brechtpd/alloy", branch = "175" }
 
@@ -69,7 +75,10 @@ ethers-core = { git = "https://github.com/smtmfft/ethers-rs", branch = "ethers-c
 ethers-providers = { git = "https://github.com/smtmfft/ethers-rs", branch = "ethers-core-2.0.10" }
 
 # serde
-serde = { version = "1.0", default-features = false, features = ["derive", "alloc"] }
+serde = { version = "1.0", default-features = false, features = [
+    "derive",
+    "alloc",
+] }
 serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
 serde_with = { version = "3.0" }
 
@@ -79,7 +88,9 @@ tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
 tracing-appender = "0.2"
 
 # memory
-cap = { git = "https://github.com/brechtpd/cap", branch = "more-stats", features = ["stats"] }
+cap = { git = "https://github.com/brechtpd/cap", branch = "more-stats", features = [
+    "stats",
+] }
 
 # misc
 hashbrown = { version = "0.14", features = ["inline-more"] }
